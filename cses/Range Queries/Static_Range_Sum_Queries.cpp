@@ -1,3 +1,25 @@
+/*
+================ STATIC RANGE SUM QUERIES ================
+
+Y tuong:
+- Day la bai Prefix Sum co mang STATIC (khong co update).
+- Xay mang pref[] 1 LAN:
+    pref[i] = tong cac phan tu tu 1 -> i
+- Moi truy van [a, b]:
+    sum = pref[b] - pref[a-1]
+
+Do phuc tap:
+- Build Prefix Sum: O(n)
+- Moi query: O(1)
+- Tong: O(n + q)
+
+Lich su bug:
+1. Brute force cong lai tung query -> O(n*q) -> TLE.
+2. Xay pref[] ben trong while(q--) -> van O(n*q) -> TLE.
+3. Sua: Dua viec build pref[] ra ngoai while -> AC.
+=========================================================
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
